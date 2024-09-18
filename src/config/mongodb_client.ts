@@ -20,11 +20,14 @@
 
 
 import { MongoClient, Db } from "mongodb";
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 let mongoDb: Db | undefined;
 
 export async function connectToDatabase(): Promise<void> {
-    const url = 'mongodb+srv://martin12082000:Martin1208__+@ujicobadb.sjemocx.mongodb.net/?retryWrites=true&w=majority&appName=ujicobadb';
+    const url: string = process.env.mongodb_uri || '';
     const client = new MongoClient(url);
 
     try {
