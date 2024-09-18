@@ -24,7 +24,13 @@ app.get('/', (req, res) => {
 });
 
 
-app.listen(portNumber,async ()=>{
-    await connectToDatabase();
-    console.log("Welcome to Note App backed Service ")
-})
+app.listen(portNumber, async () => {
+    try {
+        await connectToDatabase(); // Pastikan koneksi berhasil sebelum menjalankan server
+        console.log(`Server running on port ${portNumber}`);
+    } catch (error) {
+        console.error("Failed to connect to MongoDB:", error);
+        process.exit(1); // Keluar jika koneksi ke MongoDB gagal
+    }
+});
+
