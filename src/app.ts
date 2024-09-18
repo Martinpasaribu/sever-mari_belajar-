@@ -19,6 +19,9 @@ app.use("/v1/note",noteRouter)
 
 
 
+app.get('/', (req, res) => {
+    res.send('Welcome to the Note App Backend Service!');
+});
 
 
 app.listen(portNumber,async ()=>{
