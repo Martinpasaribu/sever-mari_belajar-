@@ -21,7 +21,7 @@ app.use("/v1/note",noteRouter)
 
 
 
-app.listen(portNumber,hostName,async ()=>{
+app.listen(portNumber,async ()=>{
     await connectToDatabase();
     console.log("Welcome to Note App backed Service ")
 })
