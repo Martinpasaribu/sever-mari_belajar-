@@ -15,7 +15,7 @@ export class  UserController {
 
         let db = getDatabase();
 
-        let usersCollection = db.collection("Data_Mari_Belajar")
+        let usersCollection = db.collection("users")
 
         const user : User=request.body;
 
@@ -65,7 +65,7 @@ export class  UserController {
 
         let db = getDatabase();
 
-        let usersCollection = db.collection("Data_Mari_Belajar")
+        let usersCollection = db.collection("users")
 
         const user : User=request.body;
 
@@ -116,7 +116,7 @@ export class  UserController {
     static  async  myProfile(request: express.Request,response :express.Response) {
         let db = getDatabase();
 
-        let usersCollection = db.collection("Data_Mari_Belajar")
+        let usersCollection = db.collection("users")
 
         const uid = request.query.uid;
 
@@ -137,7 +137,7 @@ export class  UserController {
 
         let db = getDatabase();
 
-        let usersCollection = db.collection("Data_Mari_Belajar")
+        let usersCollection = db.collection("users")
 
         const user : User=request.body;
 

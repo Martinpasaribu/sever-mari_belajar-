@@ -13,7 +13,7 @@ export async function connectToDatabase(): Promise<void> {
 
     try {
         await client.connect();
-        mongoDb = client.db("test");
+        mongoDb = client.db("DBFlutterApp");
         console.log("MongoDB connected successfully");
     } catch (error) {
         console.error("Error connecting to MongoDB:", error);
