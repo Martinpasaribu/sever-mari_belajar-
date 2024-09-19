@@ -29,7 +29,6 @@ const startServer = async () => {
         // Hubungkan ke MongoDB terlebih dahulu
         await connectToDatabase();
         console.log('Successfully connected to MongoDB');
-
         // Jalankan server hanya setelah koneksi ke MongoDB berhasil
         app.listen(portNumber, () => {
             console.log(`Server running on http://${hostName}:${portNumber}`);
